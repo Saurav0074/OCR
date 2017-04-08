@@ -5,8 +5,8 @@ import Features
 import os
 import pandas as pd
 
-path="/home/saurav/Documents/English/Selected Fonts/Sample0"
-DataFolderPath="tmpdata2small"
+path="/home/saurav/Documents/English/Selected Fonts/Sample0" # the sample train files should be renamed in the order Sample011, Sample012 and so on..
+DataFolderPath="tmpdata2small" # location for storing the trained datasets in .csv format
 currentChar=97
 for smpl in range(37,63):
 	trdata=[]
