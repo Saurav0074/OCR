@@ -13,7 +13,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier, GradientBoostingClassifier, ExtraTreesClassifier
 import sys
 
-DataFolderPath="tmpdata"
+DataFolderPath="tmpdata1"
 
 if(len(sys.argv)<2):
     image=cv2.imread("images/sampleInput.png",0)
