@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## A simple OCR for recognising lower-case and upper-case English alphabets
 
-You can use the [editor on GitHub](https://github.com/Saurav0074/OCR/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is the OCR software we built as our B.Tech. 6th semester academic project.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+The features used by us include: 
 ```markdown
-Syntax highlighted code block
+1. **Zoning** : To analyze the densities of the points and some strokes in different regions of  the image by dividing it into four non-overlapping zones (_upper left, upper right, lower left and lower right_) and form the features.
+2. **Crossings** : To count the number of transitions from background to foreground pixels along vertical and horizontal lines through the character image.
+3. **Moments** : To make the process of recognizing an object in an image size translation and rotation independent.
+4. **Intersections/Junctions in a character** : To count the number of open end points and junctions from thinned and scaled character image by divided into 16 segments, each of size 25 × 25 pixels wide. For each segment, the number of open end points and junctions are calculated. _Intersection point is defined as a pixel point which has more than two neighboring pixels in 8-connectivity while an open end has exactly one neighbor pixel._
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+When combined, these result in a total of 67 features, where the **Junction points in a character** was found to be the most relevant while the **Moments** was the least. 
 ```
+For further details on feature extraction techniques, readers are kindly referred to see [A Detailed Review of Feature Extraction in Image Processing Systems](http://ieeexplore.ieee.org/document/6783417/). 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### For training the data:
+` python3 trainingDataSetMaker.py`
+### To observe the output of the recognised image:
+` python3 main1.py`
+### To observe the accuracy:
+` python3 main.py`
+### Executing the bash script for a combined output of above two commands:
+` ./ocr.sh "/path/to/input/image"`
 
-### Jekyll Themes
+All the code has been implemented on our own.
+Highest accuracy achieved so far : _90% on Voting of classifiers_ and can further be increased by addition of more reliable features.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Saurav0074/OCR/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Contact for any query: [Saurav Jha](https://www.linkedin.com/in/saurav-mnnit/).
