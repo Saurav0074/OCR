@@ -28,9 +28,9 @@ for smpl in range(37,63):
 		trdata.append(zonFeatures)
 		clasArr.append(currentChar)
 	df=pd.DataFrame(trdata)
-	df.to_csv(DataFolderPath + "/trdata"+chr(currentChar)+".csv",index=False)
+	df.to_csv(DataFolderPath + "/trdata"+chr(currentChar)+".csv",index=False) # feature sets of trained data
 	finClasArr=[clasArr]
 	df=pd.DataFrame(finClasArr)
-	df.to_csv(DataFolderPath + "/clasArr"+chr(currentChar)+".csv",index=False)
+	df.to_csv(DataFolderPath + "/clasArr"+chr(currentChar)+".csv",index=False) # link to the trained data file along with the class labels
 	currentChar+=1
 
