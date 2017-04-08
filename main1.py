@@ -7,7 +7,7 @@ from sklearn.model_selection import GridSearchCV, cross_val_score, KFold, cross_
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier, GradientBoostingClassifier, ExtraTreesClassifier
 from sklearn.cross_validation import train_test_split
 
-DataFolderPath="tmpdata2small"
+DataFolderPath="tmpdata1"
 
 classification=[]
 trainData=[]
