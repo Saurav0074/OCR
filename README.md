@@ -13,6 +13,9 @@ When combined, these result in a total of 67 features, where the **Junction poin
 ```
 For further details on feature extraction techniques, readers are kindly referred to see [A Detailed Review of Feature Extraction in Image Processing Systems](http://ieeexplore.ieee.org/document/6783417/). 
 
+`/tempdata1` contains the trained images.
+`/images` contains the input images to be tested upon.
+
 ### For training the data:
 ` python3 trainingDataSetMaker.py`
 ### To observe the output of the recognised image:
