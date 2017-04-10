@@ -29,4 +29,4 @@ All the code has been implemented on our own.
 Highest accuracy achieved so far : _90% on Voting of classifiers_ and can further be increased by addition of more reliable features.
 
 
-Contact for any query: [Saurav Jha](https://www.linkedin.com/in/saurav-mnnit/).
+[Saurav Jha](https://www.linkedin.com/in/saurav-mnnit/).
